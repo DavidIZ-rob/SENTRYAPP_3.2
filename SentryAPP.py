@@ -122,7 +122,7 @@ class Sentry:
             r = cv2.selectROI("Target", fr, False)
             cv2.destroyWindow("Target")
             if r[2] > 0:
-                self.trk = cv2.legacy.TrackerKCF_create()
+                self.trk = cv2.TrackerKCF_create()
                 self.trk.init(fr, r)
                 self.is_tracking = True
             else:
